@@ -67,3 +67,10 @@ i {
 hr {
   color: #607d8b;
 }
+
+.footer {
+  text-align: center;
+  margin-top: 10px;
+  color: #607d8b;
+  font-size: 10px;
+}
