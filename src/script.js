@@ -1,5 +1,4 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
+function formatDate(date) {
   let days = [
     "Sunday",
     "Monday",
@@ -24,9 +23,6 @@ function formatDate(timestamp) {
 
 function showTemperature(response) {
   document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("#current-date").innerHTML = formatDate(
-    response.data.dt * 1000
-  );
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -73,6 +69,10 @@ function handleClick(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
+
+let now = new Date();
+let returnDate = document.querySelector("#current-date");
+returnDate.innerHTML = formatDate(now);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSearch);
