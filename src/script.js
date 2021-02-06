@@ -22,9 +22,10 @@ function formatDate(date) {
 }
 
 function showTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemperature
   );
   document.querySelector("#current-temp-description").innerHTML =
     response.data.weather[0].description;
@@ -69,6 +70,31 @@ function handleClick(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
+
+function convertFahr(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temp");
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function convertCelsius(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheit = document.querySelector("#fahrenheit-link");
+fahrenheit.addEventListener("click", convertFahr);
+
+let celsius = document.querySelector("#celsius-link");
+celsius.addEventListener("click", convertCelsius);
 
 let now = new Date();
 let returnDate = document.querySelector("#current-date");
