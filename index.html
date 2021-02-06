@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="src/style.css" class="styles" />
   </head>
   <body>
-    <div class="container">
+    <div class="container border rounded shadow">
       <div class="row">
         <div class="col-6">
           <h1></h1>
@@ -33,34 +33,35 @@
           </ul>
         </div>
         <div class="col-6">
-          <form id="search-form">
+          <form id="search-form" class="mb-3">
             <input
               type="text"
               class="form-control"
               placeholder="Search for your city"
               id="search-input-form"
             />
-            <br />
-            <button type="submit" class="btn btn-primary">Search 🔎</button>
+            <button type="submit" class="btn btn-primary btn-sm">
+              Search🔎
+            </button>
             <button
               type="button"
-              class="btn btn-outline-primary"
+              class="btn btn-outline-primary btn-sm"
               id="user-location"
             >
-              Your Location 📍
+              Current location 📍
             </button>
           </form>
         </div>
       </div>
       <div class="row">
         <div class="col-6">
-          <div class="row">
-            <div class="col">
-              <i class="fas fa-cloud-rain today-icon"></i>
-            </div>
-            <div class="col">
-              <h2 class="today-temp"><span id="current-temp"></span>°C</h2>
-            </div>
+          <div class="clearfix today-temp">
+            <img src="" alt="Clear" id="icon" class="float-left" />
+            <strong id="current-temp"></strong>
+            <span class="units"
+              ><a href="#" id="celsius-link" class="active">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a></span
+            >
           </div>
         </div>
         <div class="col-6">
@@ -108,6 +109,7 @@
         by Veronica Alessandrini
       </div>
     </div>
+
     <script src="src/script.js"></script>
   </body>
 </html>
