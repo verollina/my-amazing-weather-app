@@ -1,7 +1,7 @@
 .container {
   background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 40px 60px;
 }
 
@@ -33,19 +33,31 @@ h2.other-days {
   margin-top: 30px;
 }
 
-p {
-  color: #607d8b;
-  font-family: "Ubuntu", sans-serif;
-}
-
-p.today-description {
-  font-size: 20px;
+ul {
+  margin: 0;
+  padding: 0;
   margin-top: 20px;
 }
 
-p.other-days-temp {
+li {
+  list-style: none;
+  color: #607d8b;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+p {
   text-align: center;
   font-size: 15px;
+  color: #607d8b;
+  font-family: "Ubuntu", sans-serif;
 }
 
 i {
@@ -70,7 +82,7 @@ hr {
 
 .footer {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   color: #607d8b;
   font-size: 10px;
 }

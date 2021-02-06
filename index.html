@@ -27,11 +27,10 @@
       <div class="row">
         <div class="col-6">
           <h1></h1>
-          <p class="today-description">
-            <span id="current-date">Sunday 17:00</span>
-            <br />
-            <span id="current-temp-description"></span>
-          </p>
+          <ul>
+            <li>Last updated: <span id="current-date"></span></li>
+            <li id="current-temp-description"></li>
+          </ul>
         </div>
         <div class="col-6">
           <form id="search-form">
@@ -65,11 +64,10 @@
           </div>
         </div>
         <div class="col-6">
-          <p class="today-description">
-            Humidity: <span id="humidity"></span>%
-            <br />
-            Wind: <span id="wind-speed"></span> KM/h
-          </p>
+          <ul>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind-speed"></span> KM/h</li>
+          </ul>
         </div>
       </div>
       <hr />
@@ -77,35 +75,38 @@
         <class class="col">
           <h2 class="other-days">Mon</h2>
           <i class="fas fa-cloud-rain"></i>
-          <p class="other-days-temp">16°/11°</p>
+          <p>16°/11°</p>
         </class>
         <class class="col">
           <h2 class="other-days">Tue</h2>
           <i class="fas fa-cloud-sun"></i>
-          <p class="other-days-temp">16°/12°</p>
+          <p>16°/12°</p>
         </class>
         <class class="col">
           <h2 class="other-days">Wed</h2>
           <i class="fas fa-cloud-rain"></i>
-          <p class="other-days-temp">14°/10°</p>
+          <p>14°/10°</p>
         </class>
         <class class="col">
           <h2 class="other-days">Thu</h2>
           <i class="fas fa-cloud-sun"></i>
-          <p class="other-days-temp">16°/12°</p>
+          <p>16°/12°</p>
         </class>
         <class class="col">
           <h2 class="other-days">Fri</h2>
           <i class="fas fa-cloud-rain"></i>
-          <p class="other-days-temp">16°/13°</p>
+          <p>16°/13°</p>
         </class>
       </div>
-    </div>
-    <div class="footer">
-      <a href="https://github.com/veronica-ale/my-amazing-weather-app.git">
-        Open source code</a
-      >
-      by Veronica Alessandrini
+      <div class="footer">
+        <a
+          href="https://github.com/veronica-ale/my-amazing-weather-app.git"
+          target="_blank"
+        >
+          Open-source code</a
+        >
+        by Veronica Alessandrini
+      </div>
     </div>
     <script src="src/script.js"></script>
   </body>
